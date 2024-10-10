@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import {
   Colors,
   Display,
@@ -14,30 +14,11 @@ import {
 } from '../src/ui/system/theme';
 import { ThemeProvider } from 'styled-components';
 import GlobalStyles from '../src/pages/global.style.ts';
+import '../src/assets/fontello/css/fontello.css';
+import '../src/pages/_app.css';
 
 export const decorators = [
-  // withThemeFromJSXProvider({
-  //   themes: {
-  //     default: {
-  //       colors: Colors,
-  //       display: Display,
-  //       fontSize: FontSize,
-  //       fontWeight: FontWeight,
-  //       lineHeight: LineHeight,
-  //       margin: Margin,
-  //       opacity: Opacity,
-  //       padding: Padding,
-  //       radius: Radius,
-  //       shadow: Shadow,
-  //       zIndex: ZIndex,
-  //     }
-  //   },
-  //   defaultTheme: 'default',
-  //   Provider: ThemeProvider,
-  //   GlobalStyles,
-  // })
-
-  (Story) => (
+  (Story: () => ReactNode) => (
     <ThemeProvider
       theme={{
         colors: Colors,
