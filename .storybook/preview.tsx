@@ -12,6 +12,8 @@ import {
   Shadow,
   ZIndex,
 } from '../src/ui/system/theme';
+import { ToastProvider, Toast } from '../src/ui/molecules';
+import { LoadingProvider, Loading } from '../src/ui/atoms';
 import { ThemeProvider } from 'styled-components';
 import GlobalStyles from '../src/pages/global.style.ts';
 import '../src/assets/fontello/css/fontello.css';
@@ -34,8 +36,14 @@ export const decorators = [
         zIndex: ZIndex,
       }}
     >
-      <GlobalStyles />
-      <Story />
+      <LoadingProvider>
+        <ToastProvider>
+          <Story />
+          <GlobalStyles />
+          <Toast />
+          <Loading.Global />
+        </ToastProvider>
+      </LoadingProvider>
     </ThemeProvider>
   ),
 ];
