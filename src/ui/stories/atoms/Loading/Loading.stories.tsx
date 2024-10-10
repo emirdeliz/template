@@ -20,13 +20,10 @@ const GlobalWrapper = (props: LoadingProps) => {
 const TemplateCircle: StoryFn<LoadingProps> = (args) => <Loading {...args} />;
 export const LoadingCircle = TemplateCircle.bind({});
 LoadingCircle.args = {
-  circle: true,
 };
 
 const TemplateGlobal: StoryFn<LoadingProps> = (args) => (
-  <LoadingProvider>
-    <GlobalWrapper {...args} />
-  </LoadingProvider>
+  <GlobalWrapper {...args} />
 );
 
 export const LoadingGlobal = TemplateGlobal.bind({});
