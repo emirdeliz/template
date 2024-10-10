@@ -102,7 +102,7 @@ const getIdealPosition = (
     case top:
     default: {
       style.left = anchorBounds.left;
-      style.top = anchorBounds.top - height - offset * 1.5;
+      style.top = anchorBounds.top - height - (offset * 2);
       break;
     }
   }
@@ -120,30 +120,6 @@ const getIdealPosition = (
   if (hasOverflowRight) {
     style.left = document.body.offsetWidth - width - offset;
   }
-
-  // const overflowTop = (style.top + width) - window.innerWidth;
-  // const hasOverflowRight = overflowRight > 0;
-  // if (hasOverflowRight) {
-  //   style.maxWidth = overflowRight;
-  // }
-
-  // const overflowLeft = (style.left + width) - window.innerWidth;
-  // const hasOverflowRight = overflowRight > 0;
-  // if (hasOverflowRight) {
-  //   style.maxWidth = overflowRight;
-  // }
-
-  // if (style.left + width >= window.innerWidth - offset) {
-  //   style.left = anchorBounds.right - width - anchorBounds.width;
-  //   style.left += style.left < anchorBounds.left ? anchorBounds.width : 0;
-  // }
-  // if (style.top + height >= window.innerHeight - offset) {
-  //   style.top = anchorBounds.bottom - height - anchorBounds.height;
-
-  //   if (style.top <= 0) {
-  //     style.top = offset * -1;
-  //   }
-  // }
   return style;
 };
 
@@ -197,7 +173,7 @@ const withFloat = <T extends GenericObject>(
       </FloatingElement>
     );
   };
-  return forwardRef<GenericObject, T>(ReffedComponent);
+  return forwardRef<GenericObject, T>(ReffedComponent as GenericObject);
 };
 
 export { FloatingElement, withFloat };
