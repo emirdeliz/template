@@ -26,7 +26,7 @@ export const LoaderComponent = <T extends GenericObject>({
     [children]
   ) as GenericObject;
   return (
-    <Suspense fallback={<Loading.GlobalSimple />}>
+    <Suspense fallback={<Loading.Global />}>
       <Component {...props} />
     </Suspense>
   );

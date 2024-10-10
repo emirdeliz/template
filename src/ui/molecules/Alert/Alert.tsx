@@ -14,9 +14,9 @@ const AlertComponent = memo(({ before, children }: AlertProps) => {
   return (
     <S.Alert>
       {before}
-      <Title ml3 p2 fs2>
-        {children}
-      </Title>
+      <S.TitleContainer>
+        <Title ml3 p2 fs2>{children}</Title>
+      </S.TitleContainer>
     </S.Alert>
   );
 });

@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const Alert = styled.div`
-  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -9,4 +8,8 @@ export const Alert = styled.div`
   color: ${({ theme }) => theme.colors.P2};
   border-radius: ${({ theme }) => theme.radius.Sm};
   padding: ${({ theme }) => theme.padding.Nm};
+`;
+
+export const TitleContainer = styled.div`
+  flex: 1;
 `;

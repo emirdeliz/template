@@ -26,7 +26,7 @@ const Wrapper = (args: ToastProps & AppThemeOptions) => {
     <>
       <Link.Icon
         rightOpen
-        white
+        darkGreen
         data-testid="show-toast"
         onClick={showNewToast}
       />

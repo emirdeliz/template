@@ -74,7 +74,7 @@ const TooltipPopup = withFloat((props: TooltipProps) => {
 
       if (isArrowVertical) {
         setArrowLeftPosition(anchorLeft - containerLeft + anchorWidth / 2);
-        setArrowTopPosition(!bottom ? -9 : 6);
+        setArrowTopPosition(!bottom ? -13 : 6);
       } else {
         setArrowLeftPosition(left ? containerWidth - 6 : -4);
         setArrowTopPosition(

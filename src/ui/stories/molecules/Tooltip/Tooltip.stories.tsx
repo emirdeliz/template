@@ -18,7 +18,7 @@ const TooltipItem = ({ children, ...props }: TooltipProps) => (
 
 const Template: StoryFn<TooltipProps> = (args: TooltipProps) => (
   <Flex.Col>
-    <TooltipItem {...args}>Top tooltip!</TooltipItem>
+    <TooltipItem {...args} top>Top tooltip!</TooltipItem>
     <TooltipItem {...args} bottom>
       Bottom tooltip!
     </TooltipItem>

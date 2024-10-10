@@ -1,6 +1,7 @@
 import React from 'react';
 import { Meta, StoryFn } from '@storybook/react';
 import mocker from 'mocker-data-generator';
+import { faker } from '@faker-js/faker';
 import { Table, TableColumnProps, TableProps } from '@molecules';
 import { GenericObject } from '@types';
 
@@ -11,13 +12,13 @@ export default {
 
 const condominiumMocker = {
   legalName: {
-    faker: 'address.country',
+    faker: 'address.country()',
   },
   name: {
-    faker: 'address.country',
+    faker: 'address.country()',
   },
   numberOfUnits: {
-    faker: 'datatype.number({"min": 1, "max": 100})',
+    faker: 'number.int()',
   },
   createdAt: {
     faker: 'date.past',
@@ -26,7 +27,7 @@ const condominiumMocker = {
     faker: 'date.past',
   },
   id: {
-    faker: 'datatype.number({"min": 14233, "max": 102347})',
+    faker: 'number.int({"min": 14233, "max": 102347})',
   },
 };
 
@@ -39,7 +40,7 @@ const columns = [
   { key: 'id', label: 'Total Gasto', currency: true },
 ] as Array<TableColumnProps<GenericObject>>;
 
-const dataSource = mocker().schema('data', condominiumMocker, 100).buildSync()
+const dataSource = mocker().addGenerator('faker', faker) .schema('data', condominiumMocker, 100).buildSync()
   .data as Array<GenericObject>;
 
 const Template: StoryFn<TableProps<GenericObject>> = (args) => {

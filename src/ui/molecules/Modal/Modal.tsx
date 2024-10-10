@@ -50,7 +50,7 @@ export const Modal = ({
           {onClose && (
             <S.Close>
               <Link.Icon
-                sm
+                xs
                 close
                 black={!transparent}
                 white={transparent}

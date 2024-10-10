@@ -21,7 +21,7 @@ export const ProgressBar = styled.div<ProgressBarProps>`
   opacity: 0.7;
   transform-origin: left;
   height: ${PROGRESS_BAR_HEIGHT};
-  background-color: ${({ theme}) => theme.colors.White};
+  background-color: ${({ theme}) => theme.colors.DarkGreen};
 
   animation-name: ${ProgressBarAnimation};
   animation-duration: ${({ duration }) => duration || 3}s;
