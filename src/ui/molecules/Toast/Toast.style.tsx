@@ -30,7 +30,7 @@ const buildAnimation = ({ top, bottom, left, right }: ToastAnimationProps) => {
   `;
 };
 
-export const Container = styled.div`
+export const Container = styled.div<ToastPositionProps>`
   position: fixed;
   z-index: ${({ theme }) => theme.zIndex.Nm};
   ${({ topRight, topLeft, bottomLeft, topOffset }: ToastPositionProps) => {

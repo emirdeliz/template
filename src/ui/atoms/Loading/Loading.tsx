@@ -33,6 +33,5 @@ export const Loading = ({ global, center }: LoadingProps) => {
 };
 
 Loading.Global = (props: LoadingProps) => <Loading {...props} global />;
-Loading.Circle = (props: LoadingProps) => <Loading {...props} circle />;
 
 export { LoadingContext, LoadingProvider, useLoading };

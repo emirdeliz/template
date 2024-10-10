@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 import { buildMargin, buildPadding } from '@theme';
 import { Col } from '../Col/Col.style';
+import { RowProps } from './Row';
 
-export const Row = styled.div`
+export const Row = styled.div<RowProps>`
   width: 100%;
   display: flex;
   

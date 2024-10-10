@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import { buildMargin, buildPadding, getFontSize, getLineHeight } from '@theme';
+import { buildMargin, buildPadding, getFontSize, getLineHeight, MarginProps } from '@theme';
 import { MarkdownProps } from './Markdown';
 
-export const Markdown = styled.div`
+export const Markdown = styled.div<MarginProps>`
   ${buildMargin()}
   ${buildPadding()}
 `;

@@ -13,7 +13,6 @@ export const maskMoney = (money: string) => {
   const moneyFormat = (money || 0).toLocaleString('pt-BR', {
     style: 'currency',
     currency: 'BRL',
-    currencySign: ''
   });
   return moneyFormat;
 };
