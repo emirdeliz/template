@@ -101,7 +101,7 @@ export const Input = ({
       default:
         return <InputText {...props} />
     }
-  }, [props]);
+  }, [number, textarea, date, readOnly, props]);
 
   return (
     <S.Container transparent={transparent}>

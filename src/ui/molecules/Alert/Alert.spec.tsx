@@ -1,12 +1,12 @@
 import { screen, waitFor } from '@testing-library/react';
 import { render } from '@test';
-import { Story } from '@storybook/react';
+import { StoryFn } from '@storybook/react';
 import { AlertSimple, AlertInfo } from '@stories';
 import { Alert } from './Alert';
 import { AlertProps } from '..';
 import { Colors } from '@theme';
 
-const renderAlert = async (alert: Story<AlertProps>, props?: AlertProps) => {
+const renderAlert = async (alert: StoryFn<AlertProps>, props?: AlertProps) => {
   const Alert = alert;
   const { container } = render(
     <Alert {...alert.args} {...props}>
@@ -28,9 +28,8 @@ describe('Alert component test', () => {
     const alertText = screen.queryByText(
       /todos os dias os arquivos de retorno/i
     );
-    expect(alertText).toBeInTheDocument();
     expect(alertText).toHaveStyleRule('color', Colors.P2);
-    expect(alertText?.parentNode).toHaveStyleRule(
+    expect(alertText?.parentNode?.parentNode).toHaveStyleRule(
       'background-color',
       Colors.N6
     );
@@ -44,14 +43,12 @@ describe('Alert component test', () => {
     );
     const alertIcon = screen.getByTestId('icon');
 
-    expect(alertText).toBeInTheDocument();
     expect(alertText).toHaveStyleRule('color', Colors.P2);
-    expect(alertText?.parentNode).toHaveStyleRule(
+    expect(alertText?.parentNode?.parentNode).toHaveStyleRule(
       'background-color',
       Colors.N6
     );
 
-    expect(alertIcon).toBeInTheDocument();
     expect(alertIcon).toHaveStyleRule('color', Colors.P2);
   });
 });
