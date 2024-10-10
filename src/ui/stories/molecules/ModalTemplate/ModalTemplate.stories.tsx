@@ -1,5 +1,5 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { ModalTemplate, ModalTemplateProps } from '@molecules';
 import { InputFormLabel } from '@organisms';
 
@@ -8,7 +8,7 @@ export default {
   component: ModalTemplate,
 } as Meta;
 
-const Template: Story<ModalTemplateProps> = (args) => (
+const Template: StoryFn<ModalTemplateProps> = (args) => (
   <ModalTemplate {...args} />
 );
 

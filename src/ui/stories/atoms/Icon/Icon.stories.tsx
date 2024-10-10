@@ -1,5 +1,5 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { Flex, Icon, IconProps } from '@atoms';
 
 export default {
@@ -7,16 +7,16 @@ export default {
   component: Icon,
 } as Meta;
 
-const Template: Story<IconProps> = (args) => {
+const Template: StoryFn<IconProps> = (args) => {
   return (
     <>
       <Flex alignCenter justifyCenter>
         <Icon {...args} xs />
       </Flex>
-      <Flex alignCenter justifyCenter ml3>
+      <Flex alignCenter justifyCenter mt2>
         <Icon {...args} sm />
       </Flex>
-      <Flex alignCenter justifyCenter ml3>
+      <Flex alignCenter justifyCenter mt2>
         <Icon {...args} nm />
       </Flex>
     </>
@@ -35,16 +35,16 @@ IconUploadRed.args = {
   red: true,
 };
 
-export const IconCheckCircledWhite = Template.bind({});
-IconCheckCircledWhite.args = {
+export const IconCheckCircledGreen = Template.bind({});
+IconCheckCircledGreen.args = {
   check: true,
   circled: true,
-  white: true,
+  green: true,
 };
 
-export const IconPdfDoubleCircledWhite = Template.bind({});
-IconPdfDoubleCircledWhite.args = {
+export const IconPdfDoubleCircledGreen = Template.bind({});
+IconPdfDoubleCircledGreen.args = {
   pdfDouble: true,
   circled: true,
-  white: true,
+  green: true,
 };

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Story, Meta } from '@storybook/react';
+import { StoryFn, Meta } from '@storybook/react';
 import { DropdownForm, DropdownFormProps } from '@organisms';
 import { GenericObject } from '@types';
 
@@ -16,7 +16,7 @@ const optionsWithObjects = [
   { label: 'Five', value: 5 },
 ];
 
-const Template: Story<DropdownFormProps<GenericObject>> = <
+const Template: StoryFn<DropdownFormProps<GenericObject>> = <
   T extends GenericObject
 >(
   args: DropdownFormProps<GenericObject>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { Input } from '@atoms';
 import { FormGroup, FormGroupChildrenProps } from '@molecules';
 
@@ -8,7 +8,7 @@ export default {
   component: FormGroup,
 } as Meta;
 
-const Template: Story<FormGroupChildrenProps> = (args) => {
+const Template: StoryFn<FormGroupChildrenProps> = (args) => {
   const id = String(args.label).replace(/\s/g, '_');
   return <FormGroup {...args} target={id} />;
 };

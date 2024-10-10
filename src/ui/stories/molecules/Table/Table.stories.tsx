@@ -1,5 +1,5 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import mocker from 'mocker-data-generator';
 import { Table, TableColumnProps, TableProps } from '@molecules';
 import { GenericObject } from '@types';
@@ -42,7 +42,7 @@ const columns = [
 const dataSource = mocker().schema('data', condominiumMocker, 100).buildSync()
   .data as Array<GenericObject>;
 
-const Template: Story<TableProps<GenericObject>> = (args) => {
+const Template: StoryFn<TableProps<GenericObject>> = (args) => {
   return (
     <Table<GenericObject>
       {...args}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { Toast, ToastProps, ToastProvider, useToast } from '@molecules';
 import { Link } from '@atoms';
 import { AppThemeOptions } from '@theme';
@@ -35,7 +35,7 @@ const Wrapper = (args: ToastProps & AppThemeOptions) => {
   );
 };
 
-const Template: Story<ToastProps & AppThemeOptions> = (args) => {
+const Template: StoryFn<ToastProps & AppThemeOptions> = (args) => {
   return (
     <ToastProvider>
       <Wrapper {...args} />

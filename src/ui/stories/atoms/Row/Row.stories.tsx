@@ -1,5 +1,5 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { Row, RowProps, Col } from '@atoms';
 import styled from 'styled-components';
 
@@ -19,7 +19,7 @@ const Content = styled.div`
   width: 100%;
 `;
 
-const Template: Story<RowProps> = () => (
+const Template: StoryFn<RowProps> = () => (
   <Container>
     <Row>
       <Col de="2">

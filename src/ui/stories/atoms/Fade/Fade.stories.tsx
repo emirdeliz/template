@@ -1,5 +1,5 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { Fade, FadeProps } from '@atoms';
 
 export default {
@@ -7,7 +7,7 @@ export default {
   component: Fade,
 } as Meta;
 
-const Template: Story<FadeProps> = (args) => <Fade {...args} />;
+const Template: StoryFn<FadeProps> = (args) => <Fade {...args} />;
 
 export const Simple = Template.bind({});
 Simple.args = {

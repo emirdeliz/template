@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Meta, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { Loading, LoadingProps, LoadingProvider, useLoading } from '@atoms';
 
 export default {
@@ -17,13 +17,13 @@ const GlobalWrapper = (props: LoadingProps) => {
   return <Loading {...props} />;
 };
 
-const TemplateCircle: Story<LoadingProps> = (args) => <Loading {...args} />;
+const TemplateCircle: StoryFn<LoadingProps> = (args) => <Loading {...args} />;
 export const LoadingCircle = TemplateCircle.bind({});
 LoadingCircle.args = {
   circle: true,
 };
 
-const TemplateGlobal: Story<LoadingProps> = (args) => (
+const TemplateGlobal: StoryFn<LoadingProps> = (args) => (
   <LoadingProvider>
     <GlobalWrapper {...args} />
   </LoadingProvider>

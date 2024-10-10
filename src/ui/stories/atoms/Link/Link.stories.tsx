@@ -1,5 +1,5 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { Link, LinkIconProps, LinkProps } from '@atoms';
 
 export default {
@@ -7,14 +7,14 @@ export default {
   component: Link,
 } as Meta;
 
-const Template: Story<LinkProps> = (args) => <Link {...args} />;
+const Template: StoryFn<LinkProps> = (args) => <Link {...args} />;
 
 export const LinkSimple = Template.bind({});
 LinkSimple.args = {
   children: 'Hello world!',
 };
 
-const TemplateIcon: Story<LinkIconProps> = (args) => <Link.Icon {...args} />;
+const TemplateIcon: StoryFn<LinkIconProps> = (args) => <Link.Icon {...args} />;
 export const LinkIcon = TemplateIcon.bind({});
 LinkIcon.args = {
   children: 'Hello world!',

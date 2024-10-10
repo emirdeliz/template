@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Meta, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { Input, Link } from '@atoms';
 import { Title } from '../../../atoms/Title/Title.style';
 import { Modal, ModalProps } from '@molecules';
@@ -9,7 +9,7 @@ export default {
   component: Modal,
 } as Meta;
 
-const Template: Story<ModalProps> = (args) => {
+const Template: StoryFn<ModalProps> = (args) => {
   const [visible, setVisible] = useState<boolean>(true);
   return (
     <Modal {...args} visible={visible} onClose={() => setVisible(!visible)} />

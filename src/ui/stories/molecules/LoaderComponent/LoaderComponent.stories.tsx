@@ -1,5 +1,5 @@
 import React, { ComponentType } from 'react';
-import { Meta, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { LoaderComponent, LoaderComponentProps } from '@molecules';
 import { IconProps } from '@atoms';
 import { setTimeout } from 'timers';
@@ -9,7 +9,7 @@ export default {
   component: LoaderComponent,
 } as Meta;
 
-const Template: Story<LoaderComponentProps<IconProps>> = (args) => (
+const Template: StoryFn<LoaderComponentProps<IconProps>> = (args) => (
   <LoaderComponent<IconProps> {...args} />
 );
 

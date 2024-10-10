@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Meta, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { Switch, SwitchProps } from '@molecules';
 
 export default {
@@ -7,7 +7,7 @@ export default {
   component: Switch,
 } as Meta;
 
-const Template: Story<SwitchProps> = (args) => {
+const Template: StoryFn<SwitchProps> = (args) => {
   const [selected, setSelected] = useState<boolean>(false);
   return <Switch {...args} {...{ selected, onChange: setSelected }} />;
 };

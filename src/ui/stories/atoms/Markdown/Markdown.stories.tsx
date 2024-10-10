@@ -1,5 +1,5 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { Markdown, MarkdownProps } from '@atoms';
 
 export default {
@@ -7,7 +7,7 @@ export default {
   component: Markdown,
 } as Meta;
 
-const Template: Story<MarkdownProps> = ({ children }) => (
+const Template: StoryFn<MarkdownProps> = ({ children }) => (
   <Markdown>{children}</Markdown>
 );
 

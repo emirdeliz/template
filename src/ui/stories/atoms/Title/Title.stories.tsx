@@ -1,5 +1,5 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { Flex, Title, TitleProps } from '@atoms';
 
 export default {
@@ -7,7 +7,7 @@ export default {
   component: Title,
 } as Meta;
 
-const Template: Story<TitleProps> = (args) => <Title {...args} />;
+const Template: StoryFn<TitleProps> = (args) => <Title {...args} />;
 
 export const TitleSimple = Template.bind({});
 TitleSimple.args = {
@@ -33,7 +33,7 @@ TitleUpperCase.args = {
   uppercase: true,
 };
 
-const TemplateFontSize: Story<TitleProps> = (args) => (
+const TemplateFontSize: StoryFn<TitleProps> = (args) => (
   <Flex.Col>
     <Title {...args} fs1 mb1 />
     <Title {...args} fs2 mb1 />
