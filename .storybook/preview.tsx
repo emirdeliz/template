@@ -13,7 +13,7 @@ import {
   ZIndex,
 } from '../src/ui/system/theme';
 import { ToastProvider, Toast } from '../src/ui/molecules';
-import { LoadingProvider, Loading } from '../src/ui/atoms';
+import { Flex, LoadingProvider, Loading } from '../src/ui/atoms';
 import { ThemeProvider } from 'styled-components';
 import GlobalStyles from '../src/pages/global.style.ts';
 import '../src/assets/fontello/css/fontello.css';
@@ -38,7 +38,9 @@ export const decorators = [
     >
       <LoadingProvider>
         <ToastProvider>
-          <Story />
+          <Flex.Center wFull hFull>
+            <Story />
+          </Flex.Center>
           <GlobalStyles />
           <Toast />
           <Loading.Global />
