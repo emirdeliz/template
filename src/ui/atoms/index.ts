@@ -22,3 +22,4 @@ export * from './PageContainer/PageContainer';
 export * from './ProgressBar/ProgressBar';
 export * from './Hr/Hr';
 export * from './Skeleton/Skeleton';
+export * from './Tabs/Tabs';
